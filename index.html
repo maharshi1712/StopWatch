@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            margin: 0;
+        }
+        
+        .mainContainer {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            grid-template-rows: 1fr;
+            height: 100vh;
+            font-family: 'Lato', sans-serif;
+        }
+        
+        .subC_1 {
+            background-color: #202020;
+            color: rgb(16, 161, 130);
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .subC_2 {
+            background-color: aliceblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        
+        #stopwatch {
+            font-size: 100px;
+        }
+        
+        #buttons {
+            padding-left: 0;
+        }
+        
+        #buttons li {
+            display: inline;
+            padding-left: 10px;
+        }
+        
+        button {
+            width: 150px;
+            height: 50px;
+            border: 1px solid black;
+            border-radius: 50px;
+            color: rgb(0, 0, 0);
+            cursor: pointer;
+            background-color: aliceblue;
+            transition: 0.1s linear all;
+            font-size: 16px;
+        }
+        
+        button:hover {
+            color: aliceblue;
+            background-color: rgb(16, 161, 130);
+            border: none;
+        }
+        
+        #stop:hover {
+            color: aliceblue;
+            background-color: rgb(241, 64, 64);
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="mainContainer">
+            <div class="subC_1">
+                <img src="./stopwatch.png" alt="StopWatch_image" style="width:100px; height:100px;">
+                <h1 style="font-size:70px">Stop Watch</h1>
+            </div>
+            <div class="subC_2">
+                <div id="stopwatch">
+                    00:00:00
+                </div>
+
+                <ul id="buttons">
+                    <li><button onclick="startTimer()">Start</button></li>
+                    <li><button id="stop" onclick="stopTimer()">Stop</button></li>
+
+                    <li><button onclick="resetTimer()">Reset</button></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
